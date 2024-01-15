@@ -1,4 +1,8 @@
-console.log('HELLO WORLD')
+
+//# RECUPERO GLI ELEMENTI
+
+let listElement = document.getElementById('team-member-list');
+console.log(listElement)
 
 // CREO UN ARRAY DI OGGETTI
 const teamMembers = [
@@ -41,18 +45,25 @@ const teamMembers = [
         name: 'Barbara Ramos',
         role: 'Graphic Designer',
         photo: 'barbara-ramos-graphic-designer.jpg'
-
+        
     }
 ]
 
-console.log(teamMembers)
-
+let listMembers= ''
 // STAMPO IN CONSOLE LE CHIAVI DEGLI OGGETTI NELL'ARRAY
 for(let i = 0; i < teamMembers.length;i++){
-    const member = teamMembers[i]
-    console.log(teamMembers[i])
+    let member = teamMembers[i]
     //CREO CICLO FOR IN PER CICLARE IN OGNI OGGETTO DELL'ARRAY
     for(let key in member){
-        console.log(member[key])
+        let memberInfo = `${key} : ${member[key]}`;
+        listMembers+= `<li>${memberInfo} </li>`
+        console.log('sono list  items', listMembers)
     }
 }
+// STAMPO IN PAGINA I VALORI
+listElement.innerHTML += listMembers; 
+console.log('list items finale', listMembers)
+
+
+
+
