@@ -61,8 +61,8 @@ for(let i = 0; i < teamMembers.length;i++){
     }
 }
 // STAMPO IN PAGINA I VALORI
-listElement.innerHTML += listMembers; 
-console.log('list items finale', listMembers)
+// listElement.innerHTML += listMembers; 
+// console.log('list items finale', listMembers)
 
 
 

@@ -1,0 +1,20 @@
+/* CSS RESET */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.small-container{
+    width: 600px;
+    margin: auto;
+}
+
+.main-container{
+    width: 1200px;
+    margin: auto;
+}
+
+#our-team{
+    margin-top: 100px;
+}
