@@ -53,15 +53,25 @@ let listMembers= ''
 // STAMPO IN CONSOLE LE CHIAVI DEGLI OGGETTI NELL'ARRAY
 for(let i = 0; i < teamMembers.length;i++){
     let member = teamMembers[i]
-    //CREO CICLO FOR IN PER CICLARE IN OGNI OGGETTO DELL'ARRAY
-    for(let key in member){
-        let memberInfo = `${key} : ${member[key]}`;
-        listMembers+= `<li>${memberInfo} </li>`
-        console.log('sono list  items', listMembers)
-    }
+    console.log('member',member);
+    //RECUPERO I VALORI DELLE CHIAVI
+    const name = member.name;
+    const role = member.role;
+    const photo = member.photo;
+    //COSTRUISCO LIST ITEM
+    listMembers+= `<li>
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="img/${photo}">
+                        <div class="carde-body"
+                        <p>${name}</p>
+                        <p>${role}</p>
+                    </div>
+                    </li>`
+    console.log('sono list  items', listMembers)
 }
 // STAMPO IN PAGINA I VALORI
-// listElement.innerHTML += listMembers; 
+listElement.innerHTML = listMembers; 
 // console.log('list items finale', listMembers)
 
 
