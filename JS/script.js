@@ -12,7 +12,7 @@ const teamMembers = [
     {
         name: 'Angela Caroll',
         role: 'Chief Editor',
-        photo: ''
+        photo: 'angela-caroll-chief-editor.jpg'
 
     },
 
@@ -39,7 +39,7 @@ const teamMembers = [
 
     {
         name: 'Barbara Ramos',
-        role: '	Graphic Designer',
+        role: 'Graphic Designer',
         photo: 'barbara-ramos-graphic-designer.jpg'
 
     }
@@ -48,3 +48,11 @@ const teamMembers = [
 console.log(teamMembers)
 
 // STAMPO IN CONSOLE LE CHIAVI DEGLI OGGETTI NELL'ARRAY
+for(let i = 0; i < teamMembers.length;i++){
+    const member = teamMembers[i]
+    console.log(teamMembers[i])
+    //CREO CICLO FOR IN PER CICLARE IN OGNI OGGETTO DELL'ARRAY
+    for(let key in member){
+        console.log(member[key])
+    }
+}
