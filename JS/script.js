@@ -2,7 +2,6 @@
 //# RECUPERO GLI ELEMENTI
 
 let listElement = document.getElementById('team-member-list');
-console.log(listElement)
 
 // CREO UN ARRAY DI OGGETTI
 const teamMembers = [
@@ -58,21 +57,21 @@ for(let i = 0; i < teamMembers.length;i++){
     const name = member.name;
     const role = member.role;
     const photo = member.photo;
-    //COSTRUISCO LIST ITEM
-    listMembers+= `<li>
+    // COSTRUISCO I LIST ITEMS
+    listMembers+= `<li class="mb-4">
                     <div class="col">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" style="width: 18rem">
                             <img src="img/${photo}">
-                        <div class="carde-body"
-                        <p>${name}</p>
-                        <p>${role}</p>
+                        <div class="carde-body text-center"
+                            <p>${name}</p>
+                            <p>${role}</p>
+                        </div>
                     </div>
                     </li>`
-    console.log('sono list  items', listMembers)
+    console.log('sono list items', listMembers)
 }
 // STAMPO IN PAGINA I VALORI
 listElement.innerHTML = listMembers; 
-// console.log('list items finale', listMembers)
 
 
 
